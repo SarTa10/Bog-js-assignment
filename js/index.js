@@ -95,17 +95,14 @@ function clearButtons(){
 function drawSearchResult(){
     let search = new giphy(baseURL,document.getElementById("input").value);
     search._draw();
-    // clearButtons();
-    // Object.keys(localStorage).map(k=>{
-    //     let btn =document.createElement("div");
-    //     btn.classList.add("quick-search");
-    //    btn.innerHTML=`<button  class="button" value="${localStorage.getItem(k)}" id="buttons"><span class="close" id="close" name="${localStorage.getItem(k)}">X</span></button>`;
-    //    document.getElementById("buttons").append(btn);
-    // })
+    clearButtons();
+    Object.keys(localStorage).map(k=>{
+        let btn =document.createElement("div");
+        btn.classList.add("quick-search");
+       btn.innerHTML=`<button  class="button" value="${localStorage.getItem(k)}" id="buttons"><span class="close" id="close" name="${localStorage.getItem(k)}">X</span></button>`;
+       document.getElementById("buttons").append(btn);
+    })
 }
-
-
-
 
 document.getElementById("trending").addEventListener('click', drawTrending);
 document.getElementById("submit").addEventListener('click',drawSearchResult);
