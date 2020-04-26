@@ -1,0 +1,16 @@
+@media all and(max-width:720px){
+    .header-items{
+        flex-direction:column;
+    }
+    .content-items{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media alll and (max-width:320px){
+    .header-item{
+        flex-direction:column;
+    }
+}
